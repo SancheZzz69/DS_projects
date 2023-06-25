@@ -1,6 +1,6 @@
 # Прогноз количества заказов для сервиса такси
 
-[HTML](https://github.com/SancheZzz69/Portfolio/blob/main/Taxi%20Service/P1_Portfolio.html)     [ipynb](https://github.com/SancheZzz69/Portfolio/blob/main/Taxi%20Service/P1_Portfolio.ipynb)
+[HTML](https://github.com/SancheZzz69/Portfolio/blob/main/Taxi%20Service/taxi_service.html)     [ipynb](https://github.com/SancheZzz69/Portfolio/blob/main/Taxi%20Service/taxi_service.ipynb)
 
 ## Описание проекта
 
