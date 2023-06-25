@@ -1,6 +1,6 @@
 # Прогноз оттока клиентов оператора связи
 
-[HTML](https://github.com/SancheZzz69/Portfolio/blob/main/Telecom%20Operator/P3_Portfolio.html)     [ipynb](https://github.com/SancheZzz69/Portfolio/blob/main/Telecom%20Operator/P3_Portfolio.ipynb)
+[HTML](https://github.com/SancheZzz69/Portfolio/blob/main/Telecom%20Operator/telecom_operator.html)     [ipynb](https://github.com/SancheZzz69/Portfolio/blob/main/Telecom%20Operator/telecom_operator.ipynb)
 
 ## Описание проекта
 
