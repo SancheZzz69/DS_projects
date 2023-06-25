@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>P2_Portfolio</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>gold_recovery</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -15307,17 +15307,17 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <p>Пример: <code>rougher.input.feed_ag</code></p>
 <p>Возможные значения для блока <code>[этап]</code>:</p>
 <ul>
-<li>rougher — флотация</li>
-<li>primary_cleaner — первичная очистка</li>
-<li>secondary_cleaner — вторичная очистка</li>
-<li>final — финальные характеристики</li>
+<li><strong>rougher</strong> — флотация</li>
+<li><strong>primary_cleaner</strong> — первичная очистка</li>
+<li><strong>secondary_cleaner</strong> — вторичная очистка</li>
+<li><strong>final</strong> — финальные характеристики</li>
 </ul>
 <p>Возможные значения для блока <code>[тип_параметра]</code>:</p>
 <ul>
-<li>input — параметры сырья</li>
-<li>output — параметры продукта</li>
-<li>state — параметры, характеризующие текущее состояние этапа</li>
-<li>calculation — расчётные характеристики</li>
+<li><strong>input</strong> — параметры сырья</li>
+<li><strong>output</strong> — параметры продукта</li>
+<li><strong>state</strong> — параметры, характеризующие текущее состояние этапа</li>
+<li><strong>calculation</strong> — расчётные характеристики</li>
 </ul>
 
 </div>
@@ -15587,7 +15587,7 @@ $$
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Нужно подготовить прототип модели машинного обучения для «Цифры». Компания разрабатывает решения для эффективной работы промышленных предприятий.
+<p>Нужно подготовить прототип модели машинного обучения для заказчика. Компания разрабатывает решения для эффективной работы промышленных предприятий.
 Созданная нами модель поможет оптимизировать производство, чтобы не запускать предприятие с убыточными характеристиками.</p>
 <p>Цель работы: на основе данных с параметрами добычи и очистки создать модель, предсказывающую коэффициент восстановления золота из золотосодержащей руды.<br />
 Перечень задач для осуществления поставленной цели:</p>
@@ -15630,8 +15630,7 @@ $$
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">statistics</span>
 
@@ -15646,13 +15645,11 @@ $$
 <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 <span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span>
-<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">Lasso</span>
 <span class="kn">from</span> <span class="nn">sklearn.dummy</span> <span class="kn">import</span> <span class="n">DummyRegressor</span>
 
 <span class="kn">from</span> <span class="nn">sklearn.experimental</span> <span class="kn">import</span> <span class="n">enable_halving_search_cv</span> 
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">HalvingGridSearchCV</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
 <span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">make_pipeline</span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
@@ -18270,7 +18267,7 @@ jp-needs-light-background
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>По графикам можно понять, что концетрация золота действительно повышается после каждого этапа очистки, что говорит нам об эффективности технологического процесса.</p>
+<p>По графикам можно понять, что концентрация золота действительно повышается после каждого этапа очистки, что говорит нам об эффективности технологического процесса.</p>
 
 </div>
 </div>
@@ -18583,7 +18580,7 @@ jp-needs-light-background
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>А вот перед первичной очисткой размеры гранул уже нормализовались, гранулы разбили до одинаковых размеров: до флотации они были размером 20-120, а перед первичной очисткой уже 5-10. Графики тестовой и обучающей выборки чуть ли не совадают 1 в 1. Очистка идёт по плану.</p>
+<p>А вот перед первичной очисткой размеры гранул уже нормализовались, гранулы разбили до одинаковых размеров: до флотации они были размером 20-120, а перед первичной очисткой уже 5-10. Графики тестовой и обучающей выборки чуть ли не совпадают 1 в 1. Очистка идёт по плану.</p>
 
 </div>
 </div>
@@ -18671,7 +18668,7 @@ jp-needs-light-background
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>На графике ясно видно, что после каждого этапа концетрация интересующих нас металлов увеличивается. После флотации на каждом этапе имеет место быть прирост в 10%, что можно назвать успехом.</p>
+<p>На графике ясно видно, что после каждого этапа концентрация интересующих нас металлов увеличивается. После флотации на каждом этапе имеет место прирост в 10%, что можно назвать успехом.</p>
 
 </div>
 </div>
@@ -20453,12 +20450,12 @@ Wall time: 1.52 s
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>После тщательного изучения выданных изначально данных мы провели предобработку, преобразовав пустые значения и заменив некоторые типы данных.</p>
-<p>После мы принялись за анализ данных, в ходе которого выяснили, что концетрация золота повышается после каждого этапа очистки, остальные металлы же постепенно выходят вместе с &quot;отвальными хвостами&quot;.<br />
+<p>После мы принялись за анализ данных, в ходе которого выяснили, что концентрация золота повышается после каждого этапа очистки, остальные металлы же постепенно выходят вместе с &quot;отвальными хвостами&quot;.
 Графики нам показали, что гранулы были разбиты до одинаковых размеров: до флотации они были размером 20-120, а перед первичной очисткой уже 5-10.<br />
-Также мы заметили, что после каждого этапа концетрация интересующих нас металлов (золото, серебро, свинец) увеличивается. После флотации на каждом этапе имеет место быть прирост в 10%.<br />
+Также мы заметили, что после каждого этапа концентрация интересующих нас металлов (золото, серебро, свинец) увеличивается. После флотации на каждом этапе имеет место прирост в 10%.
 Это всё говорит нам об эффективности технологического процесса.</p>
 <p>Мы исследовали 4 вида моделей: линейную регрессию, лассо, дерево решений и лес.<br />
-После тщательного подбора гипер-параметров мы достигли высоких показателей точности этих моделей, но лучшими оказались именно модель ласо (на примере сырья) и модель решающего дерева (на примере финального продукта), которые были успешно протестированы. 
+После тщательного подбора гиперпараметров мы достигли высоких показателей точности этих моделей, но лучшими оказались именно модель лассо (на примере сырья) и модель решающего дерева (на примере финального продукта), которые были успешно протестированы.
 Результат тестирования приблизился к предыдущим предсказаниям на обучающей выборке.</p>
 <p>В итоге мы получили модель, помогающую оптимизировать золотодобывающее производство, чтобы не запускать предприятие с убыточными характеристиками.</p>
 
