@@ -1,6 +1,6 @@
 # Улучшение процесса обогащения золота
 
-[HTML](https://github.com/SancheZzz69/Portfolio/blob/main/Gold%20Recovery/P2_Portfolio.html)     [ipynb](https://github.com/SancheZzz69/Portfolio/blob/main/Gold%20Recovery/P2_Portfolio.ipynb)
+[HTML](https://github.com/SancheZzz69/Portfolio/blob/main/Gold%20Recovery/gold_recovery.html)     [ipynb](https://github.com/SancheZzz69/Portfolio/blob/main/Gold%20Recovery/gold_recovery.ipynb)
 
 ## Описание проекта
 
